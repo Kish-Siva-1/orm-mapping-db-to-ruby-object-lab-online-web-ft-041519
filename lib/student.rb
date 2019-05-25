@@ -72,7 +72,12 @@ class Student
       GROUP BY id
       HAVING grade < 12
     SQL
-    binding.pry
-    DB[:conn].execute(sql, self.name, self.grade)
+
+    DB[:conn].execute(sql).map do |x|
+      @id = x[0]    
+      @name = x[1]  
+      @grade = x[2]
+    end 
+    [{@id}]
   end
 end
