@@ -57,7 +57,7 @@ class Student
     sql = <<-SQL
       SELECT * 
       FROM students
-      
+      WHERE 
     SQL
     DB[:conn].execute(sql)
   end
