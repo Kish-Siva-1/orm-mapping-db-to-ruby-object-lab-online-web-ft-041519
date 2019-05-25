@@ -74,6 +74,7 @@ class Student
     SQL
     
     DB[:conn].execute(sql).map do |row|
+      binding.pry
       self.name = row[1] 
       self.grade = row[2]
     end
