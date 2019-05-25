@@ -72,7 +72,7 @@ class Student
       GROUP BY id
       HAVING grade < 12
     SQL
-    
+    binding.pry
     DB[:conn].execute(sql)
   end
 end
