@@ -79,5 +79,6 @@ class Student
       @grade = x[2]
     end 
     [{:id => @id, :name => @name, :grade => @grade}]
+    binding.pry
   end
 end
