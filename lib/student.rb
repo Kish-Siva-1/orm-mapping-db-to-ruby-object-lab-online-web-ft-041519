@@ -73,11 +73,6 @@ class Student
       HAVING grade < 12
     SQL
     
-    DB[:conn].execute(sql).map do |row|
-      @name = row[1] 
-      @grade = row[2]
-    end
-    binding.pry
-    self 
+    DB[:conn].execute(sql)
   end
 end
