@@ -78,5 +78,7 @@ class Student
       self.name = row[1] 
       self.grade = row[2]
     end
+    
+    self 
   end
 end
