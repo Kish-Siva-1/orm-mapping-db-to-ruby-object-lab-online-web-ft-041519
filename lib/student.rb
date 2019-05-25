@@ -78,6 +78,6 @@ class Student
       @name = x[1]  
       @grade = x[2]
     end 
-    [{@id}]
+    [{:id => @id, :name => @name, :grade => @grade}]
   end
 end
