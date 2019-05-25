@@ -1,3 +1,5 @@
+require 'pry'
+
 class Student
   attr_accessor :id, :name, :grade
 
@@ -59,6 +61,7 @@ class Student
       FROM students
       WHERE grade = 9
     SQL
+    binding.pry
     DB[:conn].execute(sql)
   end
   
