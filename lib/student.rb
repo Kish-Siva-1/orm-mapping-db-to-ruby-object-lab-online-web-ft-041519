@@ -73,6 +73,10 @@ class Student
       HAVING grade < 12
     SQL
 
-    DB[:conn].execute(sql)
+    DB[:conn].execute(sql).map do |x|
+      @id = x[0]
+      @name = x[1]
+      @grade = x[2]
+    end 
   end
 end
