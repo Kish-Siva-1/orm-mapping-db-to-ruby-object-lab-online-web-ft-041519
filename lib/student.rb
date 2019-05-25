@@ -114,13 +114,12 @@ class Student
     sql = <<-SQL
       SELECT * 
       FROM students
-      WHERE grade = 10
-      LIMIT 1
+      GROUP BY id
     SQL
 
     DB[:conn].execute(sql).map do |row|
       self.new_from_db(row)
-    end.first
+    end
   end
   
 end
