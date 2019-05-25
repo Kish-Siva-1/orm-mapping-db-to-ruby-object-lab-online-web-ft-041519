@@ -55,11 +55,8 @@ class Student
   
   def self.all_students_in_grade_9
     sql = <<-SQL
-    CREATE TABLE IF NOT EXISTS students (
-      id INTEGER PRIMARY KEY,
-      name TEXT,
-      grade TEXT
-    )
+    SELECT * 
+    FROM 
     SQL
     DB[:conn].execute(sql)
   end
