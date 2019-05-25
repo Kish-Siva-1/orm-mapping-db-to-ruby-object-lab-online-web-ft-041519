@@ -72,10 +72,12 @@ class Student
       GROUP BY id
       HAVING grade < 12
     SQL
-binding.pry
+
     DB[:conn].execute(sql).map do |row|
       self.new_from_db(row)
     end
-    binding.pry
   end
+  
+  
+  
 end
