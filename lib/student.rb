@@ -117,7 +117,7 @@ class Student
       WHERE grade = ? 
     SQL
 
-    DB[:conn].execute(sql, grade)
+    DB[:conn].execute(sql, number_of_students)
   end
   
 end
