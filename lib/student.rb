@@ -73,6 +73,6 @@ class Student
       HAVING grade < 12
     SQL
     binding.pry
-    DB[:conn].execute(sql)
+    DB[:conn].execute(sql, self.name, self.grade)
   end
 end
