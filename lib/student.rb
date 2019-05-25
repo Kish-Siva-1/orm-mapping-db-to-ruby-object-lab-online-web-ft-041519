@@ -105,7 +105,7 @@ class Student
       LIMIT 1
     SQL
 
-    DB[:conn].execute(sql, number_of_students)
+    DB[:conn].execute(sql)
   end
   
 end
