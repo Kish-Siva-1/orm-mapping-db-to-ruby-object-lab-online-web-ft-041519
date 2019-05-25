@@ -66,6 +66,7 @@ class Student
     sql = <<-SQL
       SELECT * 
       FROM students
+      GROUP BY id
       HAVING grade < 12
     SQL
     DB[:conn].execute(sql)
